@@ -1,4 +1,5 @@
-const express=require('express');
+// const express=require('express');
+import express from "express";
 const app=express();
 
 app.listen(4000,()=>{
@@ -25,19 +26,21 @@ app.get('/about',(req,res,next)=>{
 
 // const {name ,add}=require('./script'); --> will work
 
-// import  name  from './script.js'  ----> SyntaxError: Cannot use import statement outside a module
+import {name,add} from './script.js'  
+// ----> SyntaxError: Cannot use import statement outside a module
 
 // --> reason => cannot use import statements in  .js , .cjs extension file 
 // --> 1 ) use .mjs extension  
 
-// console.log(name);
+console.log(name);
 
-// console.log(add(5,6));
+console.log(add(5,6));
 
 
 // --> 2 ) babel setup => converts modern JS into native JS 
 //  because all browsers dont understand modern Js
 // how to ? => 1) install dependency 
+//  make a babel.config.json 
 //      babel/core 
 //      babel/cli 
 //      babel/preset-env => {
@@ -45,4 +48,4 @@ app.get('/about',(req,res,next)=>{
 //       "@babel/preset-env"
 // ]
 // }
-//  make a babel.config.json 
+// 3) define type="module" in package.json 

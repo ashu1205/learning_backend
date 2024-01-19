@@ -4,5 +4,7 @@ function add(a , b ){
     return a+b;
 }
 
-module.exports={name, add};
+// module.exports={name, add}; --> old way
+
+export {name,add}
 
