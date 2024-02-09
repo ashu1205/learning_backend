@@ -1,0 +1,16 @@
+
+.container{
+    display: flex;
+    width: 90vw;
+    height:100vh;
+    /* border: 2px solid red; */
+    justify-content: space-around;
+}
+.container-item{
+    width: 30%;
+    height: 30%;
+    padding: 1rem;
+    border: 2px solid red;
+    border-radius: 1rem;
+    
+}

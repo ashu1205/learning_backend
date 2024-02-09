@@ -11,3 +11,5 @@ router.get('/home',showHome);
 
 //export router
 module.exports=router;
+
+///  res.redirect() --> always makes a get request 
